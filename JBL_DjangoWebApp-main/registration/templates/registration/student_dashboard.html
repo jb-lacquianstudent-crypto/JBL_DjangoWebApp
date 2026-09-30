@@ -68,6 +68,22 @@
     </table>
 
     <hr>
+<!-- Enhanced Search & Filter Controls -->
+<div style="margin-top: 15px; margin-bottom: 15px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+    <input type="text" id="searchInput" placeholder="Search by name or email..." style="padding: 6px; width: 220px;">
+    
+    <select id="programFilter" style="padding: 6px;">
+        <option value="">All Programs</option>
+        <option value="bsit">BSIT</option>
+        <option value="bsn">BSN</option>
+        <option value="bsa">BSA</option>
+    </select>
+
+    <button id="clearFiltersBtn" style="padding: 6px 12px; cursor: pointer;">Clear Filters</button>
+    <button id="refreshDataBtn" style="padding: 6px 12px; cursor: pointer;">Refresh Data</button>
+
+    <span id="resultCount" style="font-weight: bold; margin-left: 10px;">Total Results: 3</span>
+</div> 
 
     <a href="{% url 'student_list' %}">
         Back to Student List
