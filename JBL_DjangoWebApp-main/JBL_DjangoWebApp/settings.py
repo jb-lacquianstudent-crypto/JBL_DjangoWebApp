@@ -39,13 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'registration',
     'home',
+    'debug_toolbar',
 ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -129,3 +132,7 @@ MAILERS = {
 
 LOGIN_REDIRECT_URL = '/registration/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
